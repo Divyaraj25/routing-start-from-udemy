@@ -22,7 +22,7 @@ export class UserComponent implements OnInit, OnDestroy {
     // this is compulsory to unscribe from the observable, otherwise it will be a memory leak
     // not for this because this params observable will be destroyed when the component is destroyed, here angular do that automatically
     // but in case of homemade observables, we have to do it manually, in ngOnDestroy
-    this.route.params.subscribe(
+    this.paramsSubscription = this.route.params.subscribe(
       (params:Params)=>{
         this.user.id = params['id'];
         this.user.name = params['name'];
