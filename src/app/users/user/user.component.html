@@ -1,2 +1,4 @@
-<p>User with ID _ID_ loaded.</p>
-<p>User name is _NAME_</p>
+<p>User with ID {{user.id}} loaded.</p>
+<p>User name is {{user.name}}</p>
+<!-- it will only update url not the content, see user.component.ts -->
+<a [routerLink]="['/users',10,'Divyaraj']">Load Divyaraj Page</a>
