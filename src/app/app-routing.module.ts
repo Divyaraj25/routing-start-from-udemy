@@ -36,6 +36,8 @@ const appRoutes: Routes = [
 
 
 @NgModule({
+  // useHash adds # to the url, and it is usefull to the older routes that have trouble with the default html5 routing
+  // imports: [RouterModule.forRoot(appRoutes, {useHash: true})],
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
